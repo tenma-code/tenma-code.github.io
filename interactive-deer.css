@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --menu-width: 200px;
+    --menu-height: 300px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    width: 100vw;
+    height: 75px;
+    background-color: #544321;
+}
+main {
+    width: 100vw;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.svg-image-container {
+    padding: 10px;
+}
+svg {
+    height: 45vh;
+}
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("interactive-frame.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+img {
+    width: 40vw;
+    height: 60vh;
+}
+.menu {
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    transition: all 500ms ease-out;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2pt solid #544321;
+}
+.video-link {
+    margin: 2rem;
+    font-size: 1em;
+}
+.recipe-section {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2pt solid orange;
+}
+.recipe {
+    margin: 0.5rem;
+}
+.word:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+
+@media only screen and (min-width: 900px) {
+    header {
+        height: 125px; /* set based on height of header on fromfieldtoplate.com */
+    }
+    main {
+        height: calc(100vh - 125px);
+        flex-direction: row;
+    }
+    svg {
+        width: 50vw;
+        height: 65vh;
+    }
+}
